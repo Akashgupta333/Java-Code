@@ -1,22 +1,23 @@
+
 public class palindrome {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		 int arr[] = {10, 3, 5, 6, 2};
-         int sum[] = new int[arr.length];
-         int s = 1,k=0;
-         for(int i=0;i<arr.length;i++){
-        	 for(int j=0;j<arr.length;j++){
-        		 if(i==j){
-        			 continue;
-        		 }
-        		 s=s*arr[j];
-        	 }
-        	 sum[k++] = s;
-        	 s = 1;
-         }
-         for(int i=0;i<sum.length;i++){
-        	 System.out.print(sum[i]+" ");	 
-         }
+        String str = "Kayak";
+        str = str.toLowerCase();
+        boolean flag = true;
+        for(int i=0;i<str.length()/2;i++){
+        	if(str.charAt(i)!=str.charAt(str.length()-1-i)){
+        		flag = false;
+        		break;
+        	}
+        }
+        if(flag){
+        	System.out.println("Palindrame");
+        }
+        else{
+        	System.out.println("Not Palindrome");
+        }
 	}
+
 }
